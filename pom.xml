@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.vcainfo.reader</groupId>
+    <artifactId>reader-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>reader-endpoint</module>
+        <module>reader-service</module>
+        <module>reader-api</module>
+        <module>reader-web</module>
+    </modules>
+
+    <packaging>pom</packaging>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <wsf.version>1.0.1-SNAPSHOT</wsf.version>
+        <xuser.version>1.0-SNAPSHOT</xuser.version>
+        <xstorage.version>1.0-SNAPSHOT</xstorage.version>
+        <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
+        <commons-io.version>2.4</commons-io.version>
+        <jstl.version>1.2</jstl.version>
+        <javax.servlet.jsp.version>2.2</javax.servlet.jsp.version>
+        <logback.version>1.1.3</logback.version>
+        <org.slf4j.version>1.6.0</org.slf4j.version>
+        <orika-core.version>1.4.6</orika-core.version>
+        <commons-httpclient.version>3.1</commons-httpclient.version>
+        <druid.version>1.0.13</druid.version>
+        <httpclient.version>4.3.6</httpclient.version>
+        <sqljdbc41.version>4.1</sqljdbc41.version>
+        <tomcat-jdbc.version>8.0.28</tomcat-jdbc.version>
+        <sitemesh.version>3.0.1</sitemesh.version>
+        <velocity.version>1.7</velocity.version>
+        <log4jdbc.version>1.2</log4jdbc.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.vcainfo.reader</groupId>
+                <artifactId>reader-endpoint</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.niu500</groupId>
+                <artifactId>xuser-service-endpoint</artifactId>
+                <version>${xuser.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.niu500</groupId>
+                <artifactId>storage-service-endpoint</artifactId>
+                <version>${xstorage.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.asscol.wsf</groupId>
+                <artifactId>wsf-mybatis</artifactId>
+                <version>${wsf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.asscol.wsf</groupId>
+                <artifactId>wsf-quartz</artifactId>
+                <version>${wsf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.asscol.wsf</groupId>
+                <artifactId>wsf-zookeeper</artifactId>
+                <version>${wsf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.asscol.wsf</groupId>
+                <artifactId>wsf-shiro</artifactId>
+                <version>${wsf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.asscol.wsf</groupId>
+                <artifactId>wsf-shiro-api</artifactId>
+                <version>${wsf.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${javax.servlet-api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>${jstl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet.jsp</groupId>
+                <artifactId>jsp-api</artifactId>
+                <version>${javax.servlet.jsp.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <!-- bind slf4j and logback-->
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${org.slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ma.glasnost.orika</groupId>
+                <artifactId>orika-core</artifactId>
+                <version>${orika-core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-httpclient</groupId>
+                <artifactId>commons-httpclient</artifactId>
+                <version>${commons-httpclient.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.microsoft.sqlserver</groupId>
+                <artifactId>sqljdbc41</artifactId>
+                <version>${sqljdbc41.version}</version>
+            </dependency>
+
+            <!--tomcat jdbc -->
+            <dependency>
+                <groupId>org.apache.tomcat</groupId>
+                <artifactId>tomcat-jdbc</artifactId>
+                <version>${tomcat-jdbc.version}</version>
+            </dependency>
+
+            <!--sitemesh -->
+            <dependency>
+                <groupId>org.sitemesh</groupId>
+                <artifactId>sitemesh</artifactId>
+                <version>${sitemesh.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity</artifactId>
+                <version>${velocity.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.googlecode.log4jdbc</groupId>
+                <artifactId>log4jdbc</artifactId>
+                <version>${log4jdbc.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.1</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                        <showWarnings>true</showWarnings>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.6</version>
+                    <configuration>
+                        <encoding>UTF-8</encoding>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

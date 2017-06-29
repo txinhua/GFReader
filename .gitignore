@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
+reader-api/reader-api.iml
+reader-endpoint/reader-endpoint.iml
+reader-parent.iml
+reader-service/reader-service.iml
+reader-web/reader-web.iml
